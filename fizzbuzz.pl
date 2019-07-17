@@ -8,35 +8,21 @@ my $a = 'FizzBuzz';
 my $b = 'Buzz';
 my $c = 'Fizz';
 
-sub fb{
-	my $i = <STDIN>;
+my $i = <STDIN>;
+    if($i % 3 == 0 && $i % 5 == 0){
 
-	if($i <= 100){
+    	print($a);
 
-	    if($i % 3 == 0 && $i % 5 == 0){
+    }elsif($i % 5 == 0){
 
-	    	print($a);
+		print($b);
 
-	    }elsif($i % 5 == 0){
+    }elsif($i % 3 == 0){
 
-			print($b);
+		print($c);
 
-	    }elsif($i % 3 == 0){
+    }else{
 
-			print($c);
+		print($i);
 
-	    }else{
-
-			print($i);
-
-	    }
-
-	}else{
-		print("100より大きいのでダメです");
-
-	}
-
-}
-
-#関数の使用
-&fb;
+    }
